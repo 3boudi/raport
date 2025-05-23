@@ -18,3 +18,13 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Frontend still built on basic Blade templates without responsive Flexbox/Grid or component-based JS framework, causing inconsistent UX across devices.  
 - Zero automated integration or end-to-end tests (PHPUnit/Laravel Dusk) for cross-system workflows, risking regressions on future refactors.  
 - Remaining UI and network-layer gaps will hinder seamless orchestration of the hypermarket–supermarket–cashier ecosystem.  
+# v1.1.1  
+Repository: https://github.com/3boudi/supermark-mengent-laravel
+
+- Enhanced multi-role authentication with Laravel Sanctum guards and custom Gates/Policies for `admin`, `manager`, and `cashier`.  
+- Optimized performance via Redis query caching (`Cache::remember`), queue-based order processing (Laravel Queues + Horizon), and eager-loaded relationships.  
+- Refined Blade UI with responsive Flexbox/Grid layouts, Livewire components for real-time validation, and ARIA-compliant accessibility fixes.  
+- Introduced a `GraphService` implementing Dijkstra’s algorithm using adjacency lists and a binary min-heap for optimal goods-routing between hypermarket nodes.  
+- Refactored network sync to use Laravel Events/Broadcasting (Pusher) for near real-time Hypermarket↔Supermarket↔Cashier updates.  
+- Added PHPUnit unit tests for auth workflows and feature tests for cart/order lifecycle, raising code coverage baseline.  
+- These enhancements lay the groundwork for a scalable, performant hypermarket system with intelligent routing and secure role-based access.  
