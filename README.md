@@ -66,5 +66,5 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Implemented IPC channels (`ipcMain`/`ipcRenderer`) for secure communication between frontend (Electron) and backend (Laravel API) over local network WebSockets.  
 - Added custom `appConfig.json` loader to inject Twitter API credentials at runtime, enabling automatic tweet-posting of sales events via OAuth 2.0.  
 - Enabled `AutoLaunch` on OS startup with `electron-auto-launch`, so the app boots and connects to the server without manual intervention.  
-- Configured `contextIsolation` and `nodeIntegration` policies to harden security while allowing native modules (e.g., `node-notifier`) for desktop notifications.  
+- Configured `contextIsolation` and `nodeIntegration` policies to harden security while allowing native modules .
 - Integrated Electron’s `autoUpdater` (Squirrel) for seamless version rollouts, ensuring users stay on the latest build without manual downloads.  
