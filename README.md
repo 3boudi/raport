@@ -7,3 +7,4 @@ Repository: https://github.com/3boudi/Cashier
 - Legacy tech stack (jQuery, Bootstrap 4) in a monolithic architecture, impeding modularization and modern framework integration.  
 - Non-responsive UI lacking adaptive layouts and ARIA accessibility compliance.  
 - Zero automated tests (unit/integration), no dependency injection, high regression risk on refactoring.  
+- Architectural limitations will hinder building a scalable hypermarket system. 
