@@ -45,7 +45,7 @@
 - Improved throughput with HTTP client pooling  (via Symfony’s HttpClient), boosting resilience under load.  
 - Exposed JSON:API–compliant resources for `admin_hypermarket`, `manager_supermarket`, and `cashier_cashier`, but inconsistent field naming and payload schemas across these interfaces.  
 - Implemented Cross-Origin Resource Sharing (CORS) policies and rate-limiting middleware, yet missing centralized API Gateway or API version negotiation.  
-- Frontend Blade components still vary in data-binding conventions (Vue vs. Livewire), leading to UI state desynchronization and edge-case rendering bugs.  
+- Frontend Blade components still vary in data-binding conventions (to new teck ), leading to UI state desynchronization and edge-case rendering bugs.  
 - Persistent schema mismatches and lack of interface contracts will impede seamless integration across hypermarket, supermarket, and cashier domains.  
 # v1.2.0  
 
