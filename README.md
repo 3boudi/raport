@@ -48,3 +48,13 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Implemented Cross-Origin Resource Sharing (CORS) policies and rate-limiting middleware, yet missing centralized API Gateway or API version negotiation.  
 - Frontend Blade components still vary in data-binding conventions (Vue vs. Livewire), leading to UI state desynchronization and edge-case rendering bugs.  
 - Persistent schema mismatches and lack of interface contracts will impede seamless integration across hypermarket, supermarket, and cashier domains.  
+# v1.2.0  
+Repository: https://github.com/3boudi/supermark-mengent-laravel
+
+- Frontend rewritten in Next.js with SSR/SSG, React Hooks for state management, and Tailwind CSS for utility-first styling.  
+- Backend remains Laravel API, fully decoupled via REST endpoints consumed with `fetch` (or Axios) in Next.js.  
+- All core use cases (product search, cart, checkout, sales history, role-based dashboards) re-implemented end-to-end with consistent request/response schemas.  
+- Admin (Hypermarket) interface rebuilt using Filament Laravel — leveraging customizable Resources, Tables, and Forms for CRUD.  
+- Unified OpenAPI spec with versioned routes (`/api/v2/...`), strong typing via JSON Schema, and automatic client generation.  
+- Improved data validation: Laravel FormRequests + Zod schemas in Next.js, ensuring contract integrity on both client and server.  
+- Performance optimizations: ISR (Incremental Static Regeneration), Laravel route & config caching, and optimized DB queries with indexed columns.  
