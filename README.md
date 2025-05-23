@@ -54,11 +54,9 @@
 - Backend remains Laravel API, fully decoupled via REST endpoints consumed with `fetch`  in Next.js.  
 - All core use cases (product search, cart, checkout, sales history, role-based dashboards) re-implemented end-to-end with consistent request/response schemas.  
 - Admin (Hypermarket) interface rebuilt using Filament Laravel — leveraging customizable Resources, Tables, and Forms for CRUD.  
-- Unified OpenAPI spec with versioned routes (`/api/v2/...`), strong typing via JSON Schema, and automatic client generation.  
-- Improved data validation: Laravel FormRequests + Zod schemas in Next.js, ensuring contract integrity on both client and server.  
+- Unified API spec with versioned routes (`/api/v2/...`), strong typing via JSON Schema, and automatic client generation.  
+- Improved data validation: Laravel FormRequests +  Next.js, ensuring contract integrity on both client and server.  
 - Performance optimizations: ISR (Incremental Static Regeneration), Laravel route & config caching, and optimized DB queries with indexed columns.  
-# v1.2.1  
-
 # v1.2.1  
 
 
