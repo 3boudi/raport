@@ -59,11 +59,14 @@
 - Performance optimizations: ISR (Incremental Static Regeneration), Laravel route & config caching, and optimized DB queries with indexed columns.  
 # v1.2.1  
 
+# v1.2.1  
 
-- Repackaged as a desktop application using Electron.js with a multi-process architecture (main + renderer) for high-performance rendering.  
-- Bundled all Node and NPM dependencies via `electron-builder`, enabling single-step packaging and cross-platform binaries.  
-- Implemented IPC channels (`ipcMain`/`ipcRenderer`) for secure communication between frontend (Electron) and backend (Laravel API) over local network WebSockets.  
-- Added custom `appConfig.json` loader to inject Twitter API credentials at runtime, enabling automatic tweet-posting of sales events via OAuth 2.0.  
-- Enabled `AutoLaunch` on OS startup with `electron-auto-launch`, so the app boots and connects to the server without manual intervention.  
-- Configured `contextIsolation` and `nodeIntegration` policies to harden security while allowing native modules .
-- Integrated Electron’s `autoUpdater` (Squirrel) for seamless version rollouts, ensuring users stay on the latest build without manual downloads.  
+
+- Repackaged as a high-performance desktop application for **Windows only** using Electron.js with a multi-process architecture (main/renderer split).  
+- All Node.js and NPM dependencies bundled using `electron-builder`, producing a standalone `.exe` installer.  
+- IPC communication (`ipcMain`/`ipcRenderer`) connects the Electron frontend with the Laravel backend via local WebSocket.  
+- Loads configuration dynamically at runtime using a custom `config.json` loader.  
+- Auto-starts with Windows boot using `electron-auto-launch`, ensuring the app connects to the LAN server without manual steps.  
+- Security-hardened using Electron’s `contextIsolation: true` and limited `nodeIntegration`.  
+- Manual version upgrades only – no auto-updater included. New releases must be installed manually by the user.  
+
