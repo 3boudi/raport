@@ -58,3 +58,13 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Unified OpenAPI spec with versioned routes (`/api/v2/...`), strong typing via JSON Schema, and automatic client generation.  
 - Improved data validation: Laravel FormRequests + Zod schemas in Next.js, ensuring contract integrity on both client and server.  
 - Performance optimizations: ISR (Incremental Static Regeneration), Laravel route & config caching, and optimized DB queries with indexed columns.  
+# v1.2.1  
+Repository: https://github.com/3boudi/supermark-mengent-laravel
+
+- Repackaged as a desktop application using Electron.js with a multi-process architecture (main + renderer) for high-performance rendering.  
+- Bundled all Node and NPM dependencies via `electron-builder`, enabling single-step packaging and cross-platform binaries.  
+- Implemented IPC channels (`ipcMain`/`ipcRenderer`) for secure communication between frontend (Electron) and backend (Laravel API) over local network WebSockets.  
+- Added custom `appConfig.json` loader to inject Twitter API credentials at runtime, enabling automatic tweet-posting of sales events via OAuth 2.0.  
+- Enabled `AutoLaunch` on OS startup with `electron-auto-launch`, so the app boots and connects to the server without manual intervention.  
+- Configured `contextIsolation` and `nodeIntegration` policies to harden security while allowing native modules (e.g., `node-notifier`) for desktop notifications.  
+- Integrated Electron’s `autoUpdater` (Squirrel) for seamless version rollouts, ensuring users stay on the latest build without manual downloads.  
