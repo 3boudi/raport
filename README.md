@@ -42,7 +42,7 @@
 
 - Reverted to HTTP/REST transport using HTTP/2 multiplexing and persistent Keep-Alive connections for inter-service calls, drastically reducing latency.  
 - Consolidated API endpoints under a unified OpenAPI spec but lacking semantic versioning, causing contract drift between modules.  
-- Improved throughput with Guzzle HTTP client pooling and Circuit Breaker pattern (via Symfony’s HttpClient), boosting resilience under load.  
+- Improved throughput with HTTP client pooling  (via Symfony’s HttpClient), boosting resilience under load.  
 - Exposed JSON:API–compliant resources for `admin_hypermarket`, `manager_supermarket`, and `cashier_cashier`, but inconsistent field naming and payload schemas across these interfaces.  
 - Implemented Cross-Origin Resource Sharing (CORS) policies and rate-limiting middleware, yet missing centralized API Gateway or API version negotiation.  
 - Frontend Blade components still vary in data-binding conventions (Vue vs. Livewire), leading to UI state desynchronization and edge-case rendering bugs.  
