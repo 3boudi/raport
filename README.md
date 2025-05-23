@@ -1,5 +1,5 @@
 # v1.0.0  
-Repository: https://github.com/3boudi/Cashier
+
 
 - Simplistic business logic without algorithmic correctness safeguards (e.g., no shortest-path optimizations like Dijkstra for inventory routing).  
 - Missing robust authentication & authorization middleware, exposing all endpoints to unauthorized access.  
@@ -9,7 +9,7 @@ Repository: https://github.com/3boudi/Cashier
 - Zero automated tests (unit/integration), no dependency injection, high regression risk on refactoring.  
 - Architectural limitations will hinder building a scalable hypermarket system. 
 # v1.1.0  
-Repository: https://github.com/3boudi/supermark-mengent-laravel
+
 
 - Refactored routing using Laravel’s `Route::resource` and middleware groups, enforcing strict MVC separation in Controllers, Models, and Views.  
 - Migrated raw SQL to Eloquent ORM with query builder and eager loading, yielding measurable performance improvements under load.  
@@ -18,8 +18,7 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Frontend still built on basic Blade templates without responsive Flexbox/Grid or component-based JS framework, causing inconsistent UX across devices.  
 - Zero automated integration or end-to-end tests (PHPUnit/Laravel Dusk) for cross-system workflows, risking regressions on future refactors.  
 - Remaining UI and network-layer gaps will hinder seamless orchestration of the hypermarket–supermarket–cashier ecosystem.  
-# v1.1.1  
-Repository: https://github.com/3boudi/supermark-mengent-laravel
+#
 
 - Enhanced multi-role authentication with Laravel Sanctum guards and custom Gates/Policies for `admin`, `manager`, and `cashier`.  
 - Optimized performance via Redis query caching (`Cache::remember`), queue-based order processing (Laravel Queues + Horizon), and eager-loaded relationships.  
@@ -29,7 +28,7 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Added PHPUnit unit tests for auth workflows and feature tests for cart/order lifecycle, raising code coverage baseline.  
 - These enhancements lay the groundwork for a scalable, performant hypermarket system with intelligent routing and secure role-based access.  
 # v1.1.2  
-Repository: https://github.com/3boudi/supermark-mengent-laravel
+
 
 - Switched transport from HTTP/AJAX to raw PHP TCP/IP sockets, implementing persistent socket streams for inter-user communication.  
 - Custom MessageBroker service lacks proper framing (no length-prefix or delimiter), causing packet fragmentation, reassembly bugs, and data corruption.  
@@ -39,7 +38,7 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Absence of fallback protocols (e.g., HTTP long-polling or WebSockets) causes failures behind NAT/firewalls and degrades reliability.  
 - These TCP/IP networking limitations critically undermine real-time sync and will obstruct scaling the hypermarket ecosystem.  
 # v1.1.3  
-Repository: https://github.com/3boudi/supermark-mengent-laravel
+
 
 - Reverted to HTTP/REST transport using HTTP/2 multiplexing and persistent Keep-Alive connections for inter-service calls, drastically reducing latency.  
 - Consolidated API endpoints under a unified OpenAPI spec but lacking semantic versioning, causing contract drift between modules.  
@@ -49,7 +48,7 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Frontend Blade components still vary in data-binding conventions (Vue vs. Livewire), leading to UI state desynchronization and edge-case rendering bugs.  
 - Persistent schema mismatches and lack of interface contracts will impede seamless integration across hypermarket, supermarket, and cashier domains.  
 # v1.2.0  
-Repository: https://github.com/3boudi/supermark-mengent-laravel
+
 
 - Frontend rewritten in Next.js with SSR/SSG, React Hooks for state management, and Tailwind CSS for utility-first styling.  
 - Backend remains Laravel API, fully decoupled via REST endpoints consumed with `fetch` (or Axios) in Next.js.  
@@ -59,7 +58,7 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Improved data validation: Laravel FormRequests + Zod schemas in Next.js, ensuring contract integrity on both client and server.  
 - Performance optimizations: ISR (Incremental Static Regeneration), Laravel route & config caching, and optimized DB queries with indexed columns.  
 # v1.2.1  
-Repository: https://github.com/3boudi/supermark-mengent-laravel
+
 
 - Repackaged as a desktop application using Electron.js with a multi-process architecture (main + renderer) for high-performance rendering.  
 - Bundled all Node and NPM dependencies via `electron-builder`, enabling single-step packaging and cross-platform binaries.  
