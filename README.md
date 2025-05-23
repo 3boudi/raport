@@ -28,3 +28,13 @@ Repository: https://github.com/3boudi/supermark-mengent-laravel
 - Refactored network sync to use Laravel Events/Broadcasting (Pusher) for near real-time Hypermarket↔Supermarket↔Cashier updates.  
 - Added PHPUnit unit tests for auth workflows and feature tests for cart/order lifecycle, raising code coverage baseline.  
 - These enhancements lay the groundwork for a scalable, performant hypermarket system with intelligent routing and secure role-based access.  
+# v1.1.2  
+Repository: https://github.com/3boudi/supermark-mengent-laravel
+
+- Switched transport from HTTP/AJAX to raw PHP TCP/IP sockets, implementing persistent socket streams for inter-user communication.  
+- Custom MessageBroker service lacks proper framing (no length-prefix or delimiter), causing packet fragmentation, reassembly bugs, and data corruption.  
+- Nagle’s algorithm enabled by default introduces head-of-line blocking and latency spikes under concurrent load—missing TCP_NODELAY tuning.  
+- Blocking I/O design leads to thread starvation, elevated CPU usage, and unpredictable request-response times between users.  
+- No robust error-handling for socket disconnects or timeouts, resulting in stale connections and memory leaks over prolonged uptime.  
+- Absence of fallback protocols (e.g., HTTP long-polling or WebSockets) causes failures behind NAT/firewalls and degrades reliability.  
+- These TCP/IP networking limitations critically undermine real-time sync and will obstruct scaling the hypermarket ecosystem.  
