@@ -18,7 +18,7 @@
 - Frontend still built on basic Blade templates without responsive Flexbox/Grid or component-based JS framework, causing inconsistent UX across devices.  
 - Zero automated integration or end-to-end tests (PHPUnit/Laravel Dusk) for cross-system workflows, risking regressions on future refactors.  
 - Remaining UI and network-layer gaps will hinder seamless orchestration of the hypermarket–supermarket–cashier ecosystem.  
-#
+# v1.1.1 
 
 - Enhanced multi-role authentication with Laravel Sanctum guards and custom Gates/Policies for `admin`, `manager`, and `cashier`.  
 - Optimized performance via Redis query caching (`Cache::remember`), queue-based order processing (Laravel Queues + Horizon), and eager-loaded relationships.  
