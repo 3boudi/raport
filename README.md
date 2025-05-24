@@ -73,7 +73,7 @@
 ## Overview
 
 **Product Name:** Supermarket App
-**Version:** 1.0.0
+**Version:** 1.2.1
 **Author:** DOMination Team
 **Type:** Cross-platform Desktop Application
 **Category:** Supermarket Management System
